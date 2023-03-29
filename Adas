@@ -1,0 +1,183 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ADMIN SIM SCRIPT (LOW EFFORT)", "DarkTheme")
+--Main
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+MainSection:NewButton("AutoClick", "Autoclicks", function()
+while wait(0.01) do
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("ReplicatedRemotes"):WaitForChild("lift"):FireServer(unpack(args))
+end
+end)
+
+MainSection:NewButton("AutoRebirth", "AutoRebirths", function()
+while wait(0.1) do
+game:GetService("ReplicatedStorage"):WaitForChild("ReplicatedRemotes"):WaitForChild("ultraLift"):FireServer()
+end
+end)
+
+MainSection:NewButton("Cmdbar", "Opens cmdbar", function()
+local args = {
+    [1] = ":cmdbar"
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+end)
+
+MainSection:NewButton("Logs", "Opens logs dummy", function()
+local args = {
+    [1] = ":logs "
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+end)
+
+MainSection:NewButton("AutoFF", "Auto ff wait for 3 seconds", function()
+while wait(3) do
+local args = {
+    [1] = ":ff"
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+end
+end)
+
+--UnThings
+local UnThings = Window:NewTab("UnThings")
+local UnThingsSection = UnThings:NewSection("UnThings")
+
+UnThingsSection:NewButton("Unmute", "It unmutes", function()
+local args = {
+    [1] = ":unmute "
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+end)
+
+UnThingsSection:NewButton("Unpunish", "Unpunish", function()
+local args = {
+    [1] = ":unpunish "
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+end)
+
+UnThingsSection:NewButton("Unpurgatory", "Unpurgatory bro", function()
+local args = {
+    [1] = ":unpurgatory "
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+end)
+
+--Specials
+local Specials = Window:NewTab("Specials")
+local SpecialsSection = Specials:NewSection("Specials")
+
+SpecialsSection:NewButton("SoloWorld", "Goes to solo world", function()
+game:GetService("ReplicatedStorage"):WaitForChild("ReplicatedRemotes"):WaitForChild("toggleSoloWorld"):FireServer()
+ 
+end)
+
+SpecialsSection:NewButton("Fake rank 5K+", "Fake rank", function()
+local args = {
+    [1] = ":notice all You've been ranked to 'LegacyCreator'!"
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+ 
+end)
+
+SpecialsSection:NewButton("Naked 4K+", "NUDE", function()
+local args = {
+    [1] = ":pants all 0 :shirt all 0"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+--Music
+local Musics = Window:NewTab("Musics")
+local MusicsSection = Musics:NewSection("Music/Disco")
+
+MusicsSection:NewButton("Disco", "Party ime", function()
+local args = {
+    [1] = ":disco"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+MusicsSection:NewButton("UnDisco", "unParty ime", function()
+local args = {
+    [1] = ":Undisco"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+
+MusicsSection:NewButton("Tacos", "Taco ime", function()
+local args = {
+    [1] = ":rainingtacos"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+MusicsSection:NewButton("OtherGameSongs", "??? itme", function()
+local args = {
+    [1] = ":destroysong"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+MusicsSection:NewButton("Closer", "Closer time", function()
+local args = {
+    [1] = ":closersong"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+MusicsSection:NewButton("PressPlay", "PressPlay song", function()
+local args = {
+    [1] = ":tokyosong"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+MusicsSection:NewButton("Mute song", "Mute the trash fucking song", function()
+local args = {
+    [1] = ":nomusic"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("HDAdminClient"):WaitForChild("Signals"):WaitForChild("RequestCommand"):InvokeServer(unpack(args))
+
+end)
+
+--Credits
+
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("Made by Astro/MCSUK")
+local CreditsSection = Credits:NewSection("Scripting Astro/MCSUK")
+local CreditsSection = Credits:NewSection("Massive credits to Astro/MCSUK")
